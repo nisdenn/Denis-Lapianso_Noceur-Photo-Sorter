@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg-900:#0a0c12; --bg-800:#0f1117; --bg-700:#161922; --bg-600:#1e2130;
+  --bg-500:#252a3a; --bg-400:#2e3448; --border:#2a2d3e;
+  --amber:#f59e0b; --amber-lt:#fbbf24;
+  --text-1:#e2e8f0; --text-2:#94a3b8; --text-3:#64748b;
+  --pick:#22c55e; --reject:#ef4444; --select:#3b82f6;
+}
+.panel { background:var(--bg-700); border:1px solid var(--border); border-radius:8px; }
+.btn { @apply px-3 py-1.5 rounded text-sm font-medium transition-all duration-150 cursor-pointer; }
+.btn-primary { background:var(--amber); color:#0a0c12; }
+.btn-primary:hover { background:var(--amber-lt); }
+.btn-ghost { background:transparent; color:var(--text-2); border:1px solid var(--border); }
+.btn-ghost:hover { background:var(--bg-500); color:var(--text-1); }
+.btn-danger { background:#7f1d1d; color:#fca5a5; border:1px solid #991b1b; }
+.btn-danger:hover { background:#991b1b; }
+.kbd { display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:20px; padding:0 4px; background:var(--bg-500); border:1px solid var(--border); border-bottom-width:2px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-2); }
+.star { cursor:pointer; transition:color 0.1s; }
+.star.filled { color:var(--amber); }
+.star.empty { color:var(--bg-400); }
+.flag-pick { background:#14532d; color:#86efac; border:1px solid #16a34a; }
+.flag-reject { background:#7f1d1d; color:#fca5a5; border:1px solid #dc2626; }
+.progress-track { background:var(--bg-500); border-radius:99px; overflow:hidden; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--amber),var(--amber-lt)); border-radius:99px; transition:width 0.3s ease; }
+.zoom-container { overflow:hidden; position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:var(--bg-900); }
+.compare-pane { flex:1; min-width:0; border:2px solid transparent; border-radius:6px; transition:border-color 0.15s; }
+.compare-pane.best { border-color:var(--amber); }
+.overlay-bg { position:fixed; inset:0; background:rgba(0,0,0,0.75); backdrop-filter:blur(4px); z-index:50; display:flex; align-items:center; justify-content:center; }
+.filmstrip-thumb { transition:transform 0.1s ease; }
+.filmstrip-thumb:hover { transform:scale(1.04); }
+@keyframes fadeIn { from{opacity:0;transform:scale(0.98)} to{opacity:1;transform:scale(1)} }
+.image-fade { animation:fadeIn 0.15s ease; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.animate-spin { animation: spin 1s linear infinite; }

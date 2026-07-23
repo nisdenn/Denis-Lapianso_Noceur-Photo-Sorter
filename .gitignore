@@ -1,0 +1,16 @@
+.env
+.env.*
+.agent
+.vscode
+.idea
+tmp
+temp
+*.log
+node_modules
+dist
+build
+coverage
+.next
+.cache
+out
+
