@@ -2,9 +2,6 @@
 
 A professional SPA Web Application built with React (Vite/CRA).
 
-## Screenshot
-
-![Noceur Photo Sorter](src/assets/logo.png)
 
 ## Features
 
